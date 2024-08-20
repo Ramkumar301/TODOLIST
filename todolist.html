@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center>
+    <h1 style="color: black;">To do list application</h1>
+</center>
+</head>
+<body style=" background-color: lightskyblue;">
+    <script>
+        let tasks=[]
+
+        function gh()
+        {
+            var c= document.getElementById('data').value;
+            
+            if(c==' ')
+        {
+            alert('Enter valid input')
+        }
+        else{
+            tasks.push(c)
+        }
+        console.log(tasks)
+        e();
+        }
+        function pop()
+        {
+            tasks.pop()
+            console.log(tasks)
+            e()
+        }
+        function fg()
+        {
+            var c= document.getElementById('date').value;
+            
+            if(c==' ')
+        {
+            alert('Enter valid input')
+        }
+        else{
+            tasks.push(c)
+        }
+        console.log(tasks)
+        e()
+        }
+        function ne()
+{
+    document.write(tasks)
+}
+function e(){
+    document.getElementById('tasksh').innerHTML=tasks.join('<br>')
+}
+        
+       
+    </script>
+    <center>
+    <input type="text" id="data">
+    <button style="color: blueviolet; background-color: rgb(238, 241, \195);"  onclick="gh()">submit</button>
+  
+    <button style="color: blueviolet;background-color:  rgb(238, 241, 195);" onclick="pop()">pop</button><br><br>
+    <hr style="width :890px;">
+    <input type="text" id="date">
+    
+    <button style="color: blueviolet;background-color: rgb(238, 241, 195);"onclick="fg()">update value</button>
+    <button style="color: blueviolet;background-color:  rgb(238, 241, 195);"onclick="ne()">display value</button>
+    <div id="tasksh"></div>
+</center>
+
+    
+</body>
+</html>
